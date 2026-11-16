@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Amecly — Clips • Memes • Moments</title>
+<meta name="description" content="Link hub resmi Amecly. Clips, memes, moments. Tonton di YouTube dan TikTok.">
+<meta name="theme-color" content="#1A1A1F">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='22' fill='%231A1A1F'/%3E%3Cpath d='M50 14 78 84H64l-5-13H41l-5 13H22z' fill='%23F5F5F7'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&family=Barlow+Condensed:ital,wght@1,700;1,800&family=Inter:wght@500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --violet:#8A2BE2; --pink:#FF2D95; --cyan:#00E0FF; --white:#F5F5F7; --ink:#1A1A1F;
+  --bg:#0c0814;
+}
+*{box-sizing:border-box;margin:0}
+html,body{min-height:100%}
+body{
+  background:var(--bg);color:var(--white);
+  font-family:"Inter",system-ui,sans-serif;
+  display:flex;justify-content:center;
+  padding:max(28px,env(safe-area-inset-top)) 18px max(40px,env(safe-area-inset-bottom));
+  position:relative;overflow-x:hidden;
+}
+/* slashes seperti banner */
+body::before,body::after{
+  content:"";position:fixed;pointer-events:none;z-index:0;
+  background:linear-gradient(115deg,transparent 35%,var(--violet) 50%,transparent 65%);
+  opacity:.45;filter:blur(2px);
+}
+body::before{width:140%;height:90px;top:-10px;left:-20%;transform:rotate(-12deg)}
+body::after{width:140%;height:70px;bottom:40px;left:-20%;transform:rotate(-12deg);
+  background:linear-gradient(115deg,transparent 35%,var(--pink) 50%,transparent 65%);opacity:.3}
+main{position:relative;z-index:1;width:100%;max-width:460px;text-align:center}
+
+.avatar{
+  width:132px;height:132px;margin:8px auto 18px;position:relative;display:grid;place-items:center;
+}
+.avatar::before{
+  content:"";position:absolute;inset:0;border-radius:50%;
+  border:4px solid transparent;
+  background:conic-gradient(from 200deg,var(--violet),var(--pink),var(--violet) 60%,transparent 62%,var(--violet)) border-box;
+  -webkit-mask:linear-gradient(#000 0 0) padding-box,linear-gradient(#000 0 0);
+  -webkit-mask-composite:xor;mask-composite:exclude;
+  box-shadow:0 0 38px rgba(138,43,226,.55);
+}
+.avatar svg{width:78px;height:78px;overflow:visible}
+
+.crown{width:44px;margin:0 auto -2px;display:block;opacity:.95}
+h1{
+  font-family:"Permanent Marker",cursive;font-weight:400;
+  font-size:clamp(3.6rem,19vw,5.4rem);line-height:1;letter-spacing:.01em;
+  transform:skewX(-9deg) rotate(-2deg);
+  background:linear-gradient(180deg,#fff 40%,#cdb8ff 75%,var(--violet));
+  -webkit-background-clip:text;background-clip:text;color:transparent;
+  filter:drop-shadow(3px 4px 0 rgba(138,43,226,.75)) drop-shadow(0 0 22px rgba(138,43,226,.5));
+  padding-right:.12em;
+}
+.tagline{
+  margin-top:10px;font-family:"Barlow Condensed",sans-serif;font-style:italic;font-weight:800;
+  font-size:1.35rem;letter-spacing:.04em;color:var(--white);
+}
+.tagline i{font-style:normal;color:var(--pink);padding:0 .35em}
+.sub{margin-top:6px;font-size:.85rem;color:#b9aed0;font-weight:500}
+
+.links{display:grid;gap:14px;margin-top:34px}
+.link{
+  --c:var(--violet);
+  display:flex;align-items:center;gap:14px;text-align:left;
+  padding:16px 18px;border-radius:14px;text-decoration:none;color:var(--white);
+  background:linear-gradient(100deg,rgba(26,26,31,.95),rgba(26,26,31,.8));
+  border:2px solid var(--c);
+  box-shadow:5px 5px 0 var(--c);
+  transition:transform .15s,box-shadow .15s;
+}
+.link:hover{transform:translate(3px,3px);box-shadow:2px 2px 0 var(--c)}
+.link:active{transform:translate(5px,5px);box-shadow:0 0 0 var(--c)}
+.link:focus-visible{outline:3px solid var(--cyan);outline-offset:4px}
+.link.yt{--c:var(--violet)}
+.link.tt{--c:var(--pink)}
+.ico{flex:none;width:46px;height:46px;border-radius:12px;display:grid;place-items:center;background:var(--c)}
+.ico svg{width:24px;height:24px;fill:#fff}
+.txt{flex:1;min-width:0}
+.txt b{display:block;font-family:"Barlow Condensed",sans-serif;font-style:italic;font-weight:800;font-size:1.6rem;line-height:1.05}
+.txt span{font-size:.8rem;color:#b9aed0}
+.go{font-family:"Barlow Condensed",sans-serif;font-style:italic;font-weight:800;font-size:1rem;
+  background:var(--cyan);color:var(--ink);padding:6px 12px;border-radius:8px;transform:skewX(-8deg)}
+
+.sub-cta{
+  display:inline-block;margin-top:30px;padding:10px 18px;
+  background:var(--white);color:var(--ink);
+  font-family:"Permanent Marker",cursive;font-size:1.05rem;line-height:1.1;
+  transform:rotate(-3deg);border-radius:4px;box-shadow:4px 4px 0 var(--violet);
+}
+footer{margin-top:34px;font-size:.75rem;color:#7d7295}
+
+@media (prefers-reduced-motion:no-preference){
+  h1{animation:pop .7s cubic-bezier(.2,1.4,.4,1) both}
+  @keyframes pop{from{opacity:0;transform:skewX(-9deg) rotate(-2deg) scale(.7)}}
+}
+</style>
+</head>
+<body>
+<main>
+  <div class="avatar" aria-hidden="true">
+    <svg viewBox="0 0 100 100">
+      <path d="M52 6 84 92H66l-6-17H40l-6 17H16zM46 58h14L53 36z" fill="#F5F5F7" fill-rule="evenodd"/>
+      <path d="M8 70 40 56 30 74z" fill="#8A2BE2"/>
+      <path d="M92 38 62 52l12 6z" fill="#FF2D95"/>
+    </svg>
+  </div>
+
+  <svg class="crown" viewBox="0 0 48 30" fill="none" stroke="#F5F5F7" stroke-width="2.4" stroke-linejoin="round" aria-hidden="true">
+    <path d="M5 26 3 8l10 8 11-12 11 12 10-8-2 18z"/>
+  </svg>
+  <h1>Amecly</h1>
+  <p class="tagline">CLIPS<i>•</i>MEMES<i>•</i>MOMENTS</p>
+  <p class="sub">Small clips, big vibes.</p>
+
+  <nav class="links" aria-label="Link Amecly">
+    <a class="link yt" href="https://www.youtube.com/@AmeCly" target="_blank" rel="noopener">
+      <span class="ico"><svg viewBox="0 0 24 24"><path d="M23 7.2a3 3 0 0 0-2.1-2.1C19 4.6 12 4.6 12 4.6s-7 0-8.9.5A3 3 0 0 0 1 7.2C.5 9.1.5 12 .5 12s0 2.9.5 4.8a3 3 0 0 0 2.1 2.1c1.9.5 8.9.5 8.9.5s7 0 8.9-.5a3 3 0 0 0 2.1-2.1c.5-1.9.5-4.8.5-4.8s0-2.9-.5-4.8zM9.8 15.5v-7l6 3.5z"/></svg></span>
+      <span class="txt"><b>YouTube</b><span>@AmeCly · tonton klip terbaru</span></span>
+      <span class="go">WATCH</span>
+    </a>
+    <a class="link tt" href="https://www.tiktok.com/@ameclyy" target="_blank" rel="noopener">
+      <span class="ico"><svg viewBox="0 0 24 24"><path d="M16.6 2h-3.2v13.2a2.9 2.9 0 1 1-2.9-2.9c.3 0 .6 0 .8.1V9.1a6.1 6.1 0 1 0 5.3 6.1V8.6a7.8 7.8 0 0 0 4.4 1.4V6.8a4.6 4.6 0 0 1-4.4-4.8z"/></svg></span>
+      <span class="txt"><b>TikTok</b><span>@ameclyy · clip pendek tiap hari</span></span>
+      <span class="go">FOLLOW</span>
+    </a>
+  </nav>
+
+  <div class="sub-cta">SUBSCRIBE<br>FOR MORE!</div>
+  <footer>© <span id="y">2026</span> Amecly</footer>
+</main>
+<script>document.getElementById("y").textContent=new Date().getFullYear()</script>
+</body>
+</html>
